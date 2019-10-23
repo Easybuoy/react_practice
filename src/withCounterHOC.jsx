@@ -9,7 +9,13 @@ const HOC = Component => {
     };
 
     render() {
-      return <Component count={this.state.count} incrementCount={this.incrementCount} />;
+      return (
+        <Component
+          count={this.state.count}
+          incrementCount={this.incrementCount}
+          {...this.props}
+        />
+      );
     }
   }
 
